@@ -1,5 +1,5 @@
 const API_URL =
-   "https://1-2-aplicaciones-web-lgq1p4p0d-melissa-manzano.vercel.app/api/chat";
+   "https://https://1-2-aplicaciones-web-ia.vercel.app//api/chat";
 
 const form = document.getElementById("chatForm");
 const input = document.getElementById("messageInput");
