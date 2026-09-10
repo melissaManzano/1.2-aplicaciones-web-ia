@@ -3,40 +3,67 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="dark">
    <title>Chat IA</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+   <div class="aurora" aria-hidden="true">
+       <span class="aurora-blob blob-1"></span>
+       <span class="aurora-blob blob-2"></span>
+       <span class="aurora-blob blob-3"></span>
+       <span class="grid"></span>
+   </div>
+
    <main class="app">
        <header class="header">
-           <div>
-               <h1>Chat IA</h1>
-               <p>Inteligencia Artificial aplicada a las TIC</p>
+           <div class="brand">
+               <span class="brand-mark" aria-hidden="true">
+                   <span class="brand-core"></span>
+               </span>
+               <div class="brand-text">
+                   <h1>Chat <span>IA</span></h1>
+                   <p>Inteligencia Artificial aplicada a las TIC</p>
+               </div>
            </div>
-           <span class="status">● IA disponible</span>
+           <span class="status">
+               <span class="status-dot" aria-hidden="true"></span>
+               IA disponible
+           </span>
        </header>
 
        <section id="messages" class="messages" aria-live="polite">
            <div class="message assistant">
-               <div class="message-label">IA</div>
-               <div class="message-content">
-                   Hola. Soy tu asistente de Inteligencia Artificial.
-                   ¿En qué puedo ayudarte?
+               <div class="avatar avatar-ai" aria-hidden="true">IA</div>
+               <div class="bubble">
+                   <div class="message-label">Asistente IA</div>
+                   <div class="message-content">Hola. Soy tu asistente de Inteligencia Artificial. ¿En qué puedo ayudarte?</div>
                </div>
            </div>
        </section>
 
        <form id="chatForm" class="chat-form">
-           <input
-               id="messageInput"
-               type="text"
-               maxlength="1000"
-               placeholder="Escribe una pregunta..."
-               autocomplete="off"
-               required
-           >
-           <button id="sendButton" type="submit">Enviar</button>
+           <div class="input-wrap">
+               <textarea
+                   id="messageInput"
+                   rows="1"
+                   maxlength="1000"
+                   placeholder="Escribe una pregunta..."
+                   autocomplete="off"
+                   required
+               ></textarea>
+               <button id="sendButton" type="submit" aria-label="Enviar mensaje">
+                   <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                       <path d="M3.4 20.4l17.45-8.05a1 1 0 0 0 0-1.82L3.4 2.48a1 1 0 0 0-1.4 1.05L3.5 9.9a1 1 0 0 0 .78.76l6.9 1.34-6.9 1.34a1 1 0 0 0-.78.76L2 19.35a1 1 0 0 0 1.4 1.05z" fill="currentColor"/>
+                   </svg>
+                   <span>Enviar</span>
+               </button>
+           </div>
+           <p class="hint">Pulsa <kbd>Enter</kbd> para enviar · <kbd>Shift</kbd>+<kbd>Enter</kbd> para salto de línea</p>
        </form>
    </main>
 
